@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Lesson 3: Adding and Subtracting in Binary</title>
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        <!-- Third party plugin CSS-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- About section-->
+        <section class="page-section bg-primary" id="about">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="text-white mt-0">Lesson 3: Adding and Subtracting in Binary</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Services section-->
+        <section class="page-section" id="services">
+            <div class="container">
+                    <div class="text-center">
+                            <p class="text-muted mb-0">All number systems can have the same mathematical operations performed on them, and binary is no exception. There are two methods we can use to add and subtract with binary: converting to decimal and calculating or manipulating the binary digits themselves.
+                            </p>
+                            <br />
+                            <p class="text-muted mb-0">
+                            Using the information in the previous lessons to count binary digits, or convert binary to decimal, we can simply convert the binary digits that need to have the operation performed and then perform the addition or subtraction in decimal. For example, let’s say we have to add the two numbers 10111 and 1100. We can figure this out easily enough by converting each of them to decimal and then performing the addition. 10111 in decimal is 1 + 2 + 4 + 16 = 23 and 1100 in decimal is 4 + 8 = 12. Hence, the answer is 23 + 12 = 35.  Converting back to binary with 35, the highest number is 32. After that there is only 3 left, which are the two rightmost binary digits set to 1. Thus, 10111 + 1100 = 100011 in binary.
+
+                            </p>
+                            <br />
+                            <p class="text-muted mb-0">
+                            However, binary digits can also be added as they are using the same methods we use to add multiple digits in decimal. If we line the digits up, we can perform math the same way, simply using the values of another base system.
+                            </p>
+                            <br />
+                            <img src="imgs/figure1.png" width="800" height="500">
+                            <img src="imgs/figure2.png" width="800" height="500">
+                            <p class="text-muted mb-0">
+                            This method can be useful if you want to avoid conversion, although it all depends on one’s preference to decide which method to use: convert and then operate, or operate directly in the binary number system. Both methods are acceptable to perform binary addition and subtraction.
+                            </p>
+                            <br />
+                            <p class="text-muted mb-0">
+                           It should be noted that often when one is expected to operate on numbers in a number system other than decimal that the answer desired may also be in the different number system. As in, if an operation is performed on binary numbers, the answer may need to be in binary, although it could also need to be in decimal or another number system. One should always be careful to look at the number system specified for the numbers that are being operated on and the number system the solution is expected to be in.
+                            </p>
+                            <br />
+                        </div>
+                    </div>
+        </section>
+        <!-- Practice Problems-->
+           <section id = portfolio class="page-section bg-dark text-white">
+             <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="mt-0">Practice Problems</h2>
+                        <hr class="divider my-4" />
+                        <p class="text-muted mb-5">Here are a few practice problems!</p>
+                          <p id =test> </p>
+                        <input type = "text" id = "answer">
+                        <input type = "button" id = "submit" value = "Submit">
+                        <input type = "button" id = "show" value = "Show Answer">
+                        <input type = "button" id = "right" value = "Next Question">
+                        <input type = "button" id = "left" value = "Previous Question">
+                    </div>
+                </div>
+                <div class="row">
+                     <div class="col-lg-12 mr-auto text-center">
+                         <br>
+                         <br>
+                           <a class="btn btn-primary btn-xl js-scroll-trigger"  href="../lesson2/index.html">Previous Lesson</a>
+                         <br>
+                         <br>
+                          <a class="btn btn-primary btn-xl js-scroll-trigger"  href="../lesson4/index.html">Next Lesson</a>
+                        <br>
+                         <br>
+                        <a class="btn btn-primary btn-xl js-scroll-trigger"  href="../../index.html">Main Page</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="bg-light py-5">
+            <div class="container"><div class="small text-center text-muted">Copyright © 2020 - Binary Arithmeticians</div></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <script src="questions.js"></script>
+    </body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Lesson 7: Applying Different Number Base Systems</title>
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        <!-- Third party plugin CSS-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- About section-->
+        <section class="page-section bg-primary" id="about">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="text-white mt-0">Lesson 7: Applying Different Number Base Systems</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Services section-->
+        <section class="page-section" id="services">
+            <div class="container">
+                    <div class="text-center">
+                            <p class="text-muted mb-0">Decimal, binary, and hexadecimal are just three number systems that exist.  There are actually an infinite amount of numbering systems, at least theoretically, since a number system is defined as having a number base value.  Since there are infinite numbers, there are an infinite number of possible base values for a number system to have.  Binary is the lowest base number system, since it defines the lowest number of possible combinations for a digit.  Decimal is the most commonly used one, as humans throughout history have found it easy to use a number base system of ten, likely because it corresponds to the number of fingers a person has on a hand.  Hexadecimal is used to represent computer bytes and information like binary, except without requiring as many digits.  It is used in the same way as binary but provides a more succinct way of analyzing computer data.
+
+                            </p>
+                            <br />
+                            <p class="text-muted mb-0">
+                            Different number systems can be used to perform different tasks, such as storing information with a certain number of possible combinations.  Depending on the number of possible combinations data can have, a different numeral system can be used to match the possible combinations as possible digits, defined by the base value.  For example, say data needs to be stored and each data location can contain five different possible values.  In this case a base 5 number system can be useful.
+                            </p>
+                            <br />
+                            <p class="text-muted mb-0">
+                           In order to use another base number system, it is typically important to be able to convert between it and other number systems, just like it is important to be able to convert between binary, hexadecimal, and decimal number systems for computer science.  The mathematics for this are very similar to the methods introduced in the second chapter for performing binary conversion, except this time a base other than 2 is used.  Going from a number base to base 10 requires knowing the base and adding multiples of powers of the base.  As an example, let’s say we have the base 5 number 4321 and want to convert it to decimal.  The base is 5, so each digit represents some power of 5.  The rightmost digit of 1 can hold values of 5^0 = 1, so the total value of the digit is 1 * 1 = 1.  For the next digit, 2, the digit value is 5^1 = 5, meaning the total value of this digit in base 5 is 5*2 = 10.  So with the rightmost digit there is a value of 1, and then left of that there is a value of 10.  The next digit, 3, equals a total of (5^2) * 3 = 25 * 3 = 75.  Next is a fourth digit of value 4 with the total value of (5^3) * 4 = 125 * 4 = 500.  To have the final decimal value, each of individual converted decimal values are added together for 1 + 10 + 75 + 500 = 586.  Thus, the base 5 number 4321 is 586 in decimal.
+
+                            </p>
+                            <br />
+                            <p class="text-muted mb-0">
+                            What about going backwards from a base value to decimal?  Let’s try to turn the decimal number 867 into a base 6 number.  Again, the same method as used in decimal to binary is used for other number systems, only the base number is changed.  The first step is to find the maximum exponential value of base 6 can fit into 867.  Let’s start by looking at 6^3.  6^3 = 216, which is smaller than 867.  Next is 6^4 = 1296, which is larger than 867.  This means the first digit will be the 6^3 digit, meaning there will be a total of 4 digits.  To find the digit value that will be the first digit, 867 is divided by 6^3 or 216.  This tells us how many times the number 216 can fit into the number 867 and what the maximum first digit can be.  867 / 216 is approximately 4.01, meaning the value in the first digit is 4.  When performing this division, it is important to always round down, since the next number up, in this case 5, is bound to create a number larger than the number we are trying to convert in the digit place it will reside in.  Therefore, our first digit is 4.  To find the remaining number we have to try converting, we use subtraction.  867 - 4 * 216 = 3.  The next digit place, the 6^2 digit, holds values of 64.  64 is much larger than 3, so this digit will be a 0.  The third digit will contain values of 6^1 = 6, which is also set to 0 as 6 is larger than 3.  Finally we have the fourth and last digit value of 6^0 = 1.  1 can go into 3 a total of 3 times, of course, so the final digit will be three.  Thus, the decimal number 867 is equal to the base 6 number 4003.
+                            </p>
+                            <br />
+                        </div>
+                    </div>
+        </section>
+        <!-- Practice Problems-->
+           <section id = portfolio class="page-section bg-dark text-white">
+             <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="mt-0">Practice Problems</h2>
+                        <hr class="divider my-4" />
+                        <p class="text-muted mb-5">Here are a few practice problems!</p>
+                          <p id =test> </p>
+                        <input type = "text" id = "answer">
+                        <input type = "button" id = "submit" value = "Submit">
+                        <input type = "button" id = "show" value = "Show Answer">
+                        <input type = "button" id = "right" value = "Next Question">
+                        <input type = "button" id = "left" value = "Previous Question">
+                    </div>
+                </div>
+                <div class="row">
+                     <div class="col-lg-12 mr-auto text-center">
+                         <br>
+                         <br>
+                            <a class="btn btn-primary btn-xl js-scroll-trigger"  href="../lesson6/index.html">Previous Lesson</a>
+                         <br>
+                         <br>
+                        <a class="btn btn-primary btn-xl js-scroll-trigger"  href="../../index.html">Main Page</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="bg-light py-5">
+            <div class="container"><div class="small text-center text-muted">Copyright © 2020 - Binary Arithmeticians</div></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <script src="questions.js"></script>
+    </body>
+</html>

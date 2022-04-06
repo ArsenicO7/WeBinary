@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Lesson 5: What is Hexadecimal?</title>
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        <!-- Third party plugin CSS-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- About section-->
+        <section class="page-section bg-primary" id="about">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="text-white mt-0">Lesson 5: What is Hexadecimal?</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Services section-->
+        <section class="page-section" id="services">
+            <div class="container">
+                    <div class="text-center">
+                            <p class="text-muted mb-0">Hexadecimal is the name of the base 16 number system. This means that each digit in this number system can hold a total of sixteen values. For decimal, which can hold up to ten values in each digit, the numbers range from 0-9, but in hexadecimal how are numbers higher than 9 expressed in a digit? This is actually done using letters. The value A in a digit is equal to the number 10 in decimal, B is equal to 11, and so on to F is equal to 15. Each hexadecimal digit can range from 0-F, for a total of 16 possible digits.
+                            </p>
+                            <br />
+                            <p class="text-muted mb-0">
+                           Since hexadecimal is just another number system, the same methods can be used for converting between different number systems, such as binary and decimal. Converting from hexadecimal to decimal is very similar to how we convert from binary to decimal. The main added difficulty is simply the larger size of the digits.
+
+                            </p>
+                            <br />
+                            <p class="text-muted mb-0">
+                            The rightmost digit of any hexadecimal digit can have a value of 0-F, but then what does that value become for the digits left of it? The base of the number system is 16, so the next value will hold values of 16^1, or increment the  number by 16. So for the number 10 in hexadecimal, we have the 16 value digit with a value of 1, so the total number of the hexadecimal number 10 is 16 in decimal. If the digit increases and we have the number 20, another 16 value is added for a total value of 32 in terms of decimal. For the hexadecimal number F0, we have a total number value in decimal of 16 * 15 = 240. The next digit will increment the number values by 16 ^ 2 = 256. That means the number 100 in decimal in hexadecimal is 256 in decimal.
+                            </p>
+                            <br />
+                            <p class="text-muted mb-0">
+                            For an example with a more complex hexadecimal number, let’s say we have the number D04A. The first digit on the left will be the 16^3 = 4096 digit, and the digit D is the 13th digit that this digit can hold. That means the total value of the digit for this number, or the value of D000, is 4096 * 15 = 61,440, which is quite the large number compared to what we would find with only four digits in binary or decimal. The next digit is a 0, so there is nothing for the 256 digit. Next there is a 4 at the 16 value digit, adding a value of 16 * 4 = 64 to the total number, which is now 61,440 + 64 = 61,504. The final digit is A, which represents a value of 10 in decimal, so the final value of D04A in decimal is 61,504 + 10 = 61,514.
+                            </p>
+                            <br />
+                            <p class="text-muted mb-0">
+                            Going from decimal to hexadecimal can be a bit trickier do to having to find the highest number that can go for a leftmost digit. In binary, one can simply double by twos to find the maximum digit, but now everything is in terms of multiples of 16. However, the same steps can still be used, it just requires knowing all of the multiples of 16 for as large as the number requires, which is not easy. As a simpler solution, the next chapter discusses how hexadecimal can be converted to binary and then converted to decimal, which is actually much easier than converting straight from hexadecimal to decimal.
+                            </p>
+                            <br/>
+                        </div>
+                    </div>
+        </section>
+        <!-- Practice Problems-->
+           <section id = portfolio class="page-section bg-dark text-white">
+             <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <p class="text-muted mb-5">Thank you for viewing the lesson!</p>
+                    </div>
+                </div>
+                <div class="row">
+                     <div class="col-lg-12 mr-auto text-center">
+                            <a class="btn btn-primary btn-xl js-scroll-trigger"  href="../lesson4/index.html">Previous Lesson</a>
+                         <br>
+                         <br>
+                          <a class="btn btn-primary btn-xl js-scroll-trigger"  href="../lesson6/index.html">Next Lesson</a>
+                        <br>
+                         <br>
+                       <a class="btn btn-primary btn-xl js-scroll-trigger" href="../../index.html">Main Page</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="bg-light py-5">
+            <div class="container"><div class="small text-center text-muted">Copyright © 2020 - Binary Arithmeticians</div></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

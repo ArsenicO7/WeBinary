@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Lesson 6: Converting between Binary and Hexadecimal</title>
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        <!-- Third party plugin CSS-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- About section-->
+        <section class="page-section bg-primary" id="about">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="text-white mt-0">Lesson 6: Converting between Binary and Hexadecimal</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Services section-->
+        <section class="page-section" id="services">
+            <div class="container">
+                    <div class="text-center">
+                            <p class="text-muted mb-0">As mentioned in the previous lesson, it can be difficult to convert decimal directly to binary. However, it is made much easier if a decimal value is first converted to binary and then the binary number is converted to hexadecimal.
+
+                            </p>
+                            <br />
+                            <p class="text-muted mb-0">
+                            First let’s look at how binary and hexadecimal numbers are divided. With four hexadecimal digits, the right most goes by increments of 1, then 16, then 256, then 2,048. For binary numbers, the order goes, from right to left, value of 1, 2, 4, 8, 16, 32, 64, 128, 256 for 8 digits. It can continue with doubling. Right now let’s look at the first 16 binary digit places.
+
+                            </p>
+                            <br />
+                            <p class="text-muted mb-0">
+                            Notice any relationship between the hexadecimal and binary number system? Every 4th digit value is the same as the next digit in hexadecimal. That is because doubling by two four times is the same as doubling once by sixteen. If the first 16 binary digits are separated into groups of four, each grouping of binary digits can hold the same number of values as a single hexadecimal digit, or 16 possible combinations.
+
+                            </p>
+                            <br />
+                            <p class="text-muted mb-0">
+                            To convert from hexadecimal to binary, each hexadecimal value can be displayed separately as four binary digits. This requires only dealing then with the individual digits all in the same way, disregarding which value the digit is located at. For example, let’s say we have the hexadecimal number A09E. The first digit is A, which has a value of ten in decimal. This decimal value of ten is then placed into four binary digits. Each binary digit holds a value of, in order from left to right, 8, 4, 2, and 1. To start placing the value of ten inside these digits, the 8 digit is set to 1 along with the 2 digit for the binary number 1010. The next hexadecimal digit is 0, so in binary this is simply four more 0s. Next is a 9, which is 1001 in binary. Finally, the last digit is E, which is 14 in decimal and 1110 in binary. The final number of A09E converted to decimal is simply these groups of binary numbers put next to each other, 1010000010011110.
+
+                            </p>
+                            <br />
+                            <p class="text-muted mb-0">
+                            While the hexadecimal value of A09E can be converted to decimal by using the method describes in the previous chapter and multiplying the base 16 to powers and multiplying by the decimal value of each digit, it can sometimes be easier to first convert to binary and then to decimal. The number 1010000010011110 is a long number, but it is very easy to add. Starting from the rightmost digits, the digit locations set to one are added. Finding the next digit location that is added just requires multiplying the previous one by two, so this can be done quite easily. The addition in this case would be 2 + 4 + 8 + 16 +128 + 8,192 + 32,768 = 41,118.
+
+                            </p>
+                            <br />
+                            <p class="text-muted mb-0">
+                            This relationship between binary and hexadecimal can be even useful for converting from decimal to hexadecimal, which can be more difficult. The first step would be to convert the decimal digit to binary, then convert the binary number to decimal. Let’s say we want to convert 38,496 from decimal to hexadecimal. The number is first converted to binary by finding the biggest number that can be placed. Knowing the exponential powers of two is needed for this. The highest exponential that can fit is 33,568, which is 2^15. That means 33,568 in binary is 1000000000000000, or a 1 followed by 15 zeros. We can work with this number, setting values of 0 to 1 when we reach a digit that can contain our number. 38,496 - 32,768 = 4,832, so there is 5,728 left to be placed in the binary number. The 15th digit has a value of 32,768/2 = 16,384. This number cannot fit into 5,728, so it remains a zero. The next digit holds 8,192, also too large, but the next digit is 4,092, which is smaller than 5,728. This leaves the binary number 1001000000000000 and a number of 5,728 - 4,096 = 1,632 left to place. The next digit value is 2,048, which is too large, but then the next value after that is 1,028, which will be set to one to create 1001010000000000 and leave 1,632 - 1,024 = 608 left. The next digit is 512, which is also set to 1 to have 100101100000000 and leave 608 - 512 = 96 left. The digits values of 216 and 128 are skipped, but the 64 value digit is set to 1 for 1001011001000000, leaving 96 - 64 = 32 left. This means the last digit of 32 has to be set to 1 and the conversion is finished, meaning 38,496 in decimal is 1001011001100000 in binary.
+                        </p>
+                        <br>
+                        <p class="text-muted mb-0">
+                            Converting this 16-digit binary number to hexadecimal is very simple. The number is divided into groups of four, starting from the right. This is because if the number did not have a number of digits divisible by four like this one happens to, dividing by four starting from the left would leave less than four digits in the rightmost grouping, which would not work for the conversion. If there are less than four digits in the leftmost grouping, however, this does not matter. But in this case the binary number evenly divides into group of four. The first grouping is 1001, which is 9 in both decimal and hexadecimal, so the leftmost hexadecimal digit will be 9. The next grouping is 0110, which is 6 in hexadecimal, and the grouping after that is also 0110 and 6 in hexadecimal. The last grouping is all zeros, meaning the rightmost digit in the final number will be 0. The final hexadecimal number of the binary number 1001011001100000, which is also equal to the decimal number 38,496, is 9660.
+                        </p>
+                        <br>
+                        </div>
+                    </div>
+        </section>
+        <!-- Practice Problems-->
+           <section id = portfolio class="page-section bg-dark text-white">
+             <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="mt-0">Practice Problems</h2>
+                        <hr class="divider my-4" />
+                        <p class="text-muted mb-5">Here is a converter to help with the problems!</p>
+                        <input type = "text" id = "input">
+                        <input type = "button" id = "b_to_d" value = "Binary to Decimal">
+                        <input type = "button" id = "d_to_b" value = "Decimal to Binary">
+                        <input type = "button" id = "d_to_h" value = "Decimal to Hexadecimal">
+                        <input type = "button" id = "h_to_d" value = "Hexadecimal to Decimal">
+                        <p id = Result></p>
+                        <p class="text-muted mb-5"><br>Here are a few practice problems!</p>
+                          <p id =test> </p>
+                        <input type = "text" id = "answer">
+                        <input type = "button" id = "submit" value = "Submit">
+                        <input type = "button" id = "show" value = "Show Answer">
+                        <input type = "button" id = "right" value = "Next Question">
+                        <input type = "button" id = "left" value = "Previous Question">
+                    </div>
+                </div>
+                <div class="row">
+                     <div class="col-lg-12 mr-auto text-center">
+                         <br>
+                         <br>
+                            <a class="btn btn-primary btn-xl js-scroll-trigger"  href="../lesson5/index.html">Previous Lesson</a>
+                         <br>
+                         <br>
+                          <a class="btn btn-primary btn-xl js-scroll-trigger"  href="../lesson7/index.html">Next Lesson</a>
+                        <br>
+                         <br>
+                        <a class="btn btn-primary btn-xl js-scroll-trigger"  href="../../index.html">Main Page</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="bg-light py-5">
+            <div class="container"><div class="small text-center text-muted">Copyright © 2020 - Binary Arithmeticians</div></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <script src="../converter.js"></script>
+        <script src="questions.js"></script>
+    </body>
+</html>

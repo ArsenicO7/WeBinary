@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Lesson 2: What is Binary?</title>
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.12.1/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+        <!-- Third party plugin CSS-->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- About section-->
+        <section class="page-section bg-primary" id="about">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="text-white mt-0">Lesson 2: What is Binary?</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Services section-->
+        <section class="page-section" id="services">
+            <div class="container">
+                    <div class="text-center">
+                            <p class="text-muted mb-0">
+                                Binary is a base 2 number system consisting of only two types of digits: 0 and 1. While it is not used in everyday math calculations, binary is the foundation of computer science, as all computers operate on a fundamental level using this number system.
+                            </p>
+                            <br>
+                            
+                               <h3><u><b>Computers and Binary</b></u></h3>
+                                <p class="text-muted mb-0">
+                                <br>
+                                Computers store data, on the most basic level, in the form of bits. A single bit is an amount of space in a computer equal to one binary digit, meaning it can be set to a value of 0 or 1. A computer operates using collections of thousands of thousands of bits, each with a different value of 0 or 1. These combinations create different commands or forms of information for the computer to interpret, allowing it to perform a multitude of tasks and store vast amounts of information.
+                            </p>
+                            <br>
+                            <p class="text-muted mb-0">
+                                For example, let’s say we have a two-bit piece of data. This means there are two different binary digits, and using the formula in the previous lesson we have 2^2 = 4 possible combinations with these two bits: 00, 01, 10, and 11. The computer can use these four different combinations to record different tasks or interpret functionality. For instance, these particular two bits can represent the state of a document. If the left bit is 1, then the user is currently editing the document. If the right bit is 1, the document has unsaved changes. Otherwise, the bits have a value of 0. Therefore, if this two-bit piece of data is 00, the file is closed with no changes made since the last save. If the value is 11, then the document is in the middle of being edited.
+                            </p>
+                            <br>
+                            <p class="text-muted mb-0">
+                                Of course, the combinations are rarely as simple as this. Rather, a task like this would most likely have activity and file states recorded with bits upon bits rather than a mere two bits. However, computer scientists do not need to know every single one of these binary communications or even account for them when creating software and altering program functionality, since binary is the very backend of what the modern programmer deals with. Rather, the programmer deals with a higher end language, such as C++, that alters the lower level languages like Assembly all the way down to the computer’s binary computation.
+                            </p>
+                            <br>
+                        <h3><u><b>Counting With Binary </b></u></h3>
+                                <p class="text-muted mb-0">
+                                <br>
+	                            Binary, just like all other number systems, can also be used to count numbers. All number systems count depending on their base value. Decimal, with a base of 10, counts numbers at intervals of 10. The rightmost digit will increment a numbers value by 10^0 = 1. The next digit will increment number values by 10^1 = 10. When we have the number 11, increasing the right digit by one to 2 will make the number 12, which is an increase by a single value of 1. If the digit to the left of it is increase instead to create 21, the value of the number is increased by 10.
+
+                            </p>
+                            <br>
+                            <p class ="text-muted mb-0">
+                                Binary works the same way, but instead at increments of 2, its base value. With the number 11 in binary, the right most digit actually has a value of 2^0 = 1. The digit to the left of it will have a value of 2^1 = 2. Therefore, increasing the binary value of 00 to 11 increases it by one with the right digit by 1 and the left digit by 2. Thus, the total value of 11 in binary is 1 + 2 = 3.
+                            </p>
+                            <br>
+                            <p class ="text-muted mb-0">
+                                The same concept applies to larger binary numbers. Let’s say we have the number 101011. We know that the rightmost digits carry the values of 1 and 2 for a total value of three. The next digit, which is a 0, can hold a value of 2^2, or 4. Going to the next digit, the number’s value at 2^3 = 8 is 1, meaning the total value of the number 1011 is 8 + 2 +1 = 11. Going to the left, the value of the 2^4 = 16 bit is 0, so we do not add any value at this digit. For the leftmost value, the position is 2^5 = 32, so the 1 digit at this location creates the addition of 32 to the number’s value. Therefore, the decimal value of the binary number 101011 is (2^5)*1 + (2^4)*0 + (2^3)*1 + (2^2)*0 + (2^1)*1 + (2^0)*1 = 32 + 8 + 2 + 1 = 43.
+                            </p>
+                            <br>
+                            <p class ="text-muted mb-0">
+                                The math can be even more straightforward by using the doubling trick for counting binary. The rightmost value has a value of 1, the value left of it 2, then 4, 8, 16, and so on. Each of these values is a double of the previous, so rather than needing to work with exponential equations for calculating a binary number in decimal, we can simply count by twos for each number that has a 1.
+                            </p>
+                            <br>
+                            <p class ="text-muted mb-0">
+                                To demonstrate, say we have the binary number 100111.  The right digit has a 1 at the binary location of 1, then the next digit is 1 at the binary location of 2. After that is 4, so we so far with the first 3 rightmost digits have 1, 2, and 4. The next value is 8, but there’s a 0 digit there, so that value is skipped when counting. The same goes for the next digit at 16. Finally, we have a 1 at the value 32 location. Thus, the final value of the number 100111 in decimal is 1 + 2 + 4 + 32 = 39.
+                            </p>
+                            <br>
+                            <p class ="text-muted mb-0">
+                                What about going from decimal to binary? Since all binary digits are doubles of the previous number and are restricted to containing certain values, this can easily be done using a strategy of continuously subtracting the largest possible value from the number.  For example, to get the binary value of 39, the largest binary digit value that can fit inside it is 32, which is 2^5.  The binary value for 32 is 100000, and that leaves only 39 - 32 = 7 digits left to add to the binary number. We then have to work our way right of the first digit in the number. The next value after the 32 value digit is 16. 16 is larger than 7, so that digit cannot be used and is left as a 0. Next is 8, which also cannot be used. However, the next digit is 4, which can fit within 7, so that digit is turned into a 1, leaving the binary number as 100100 with 7 - 4 = 3 left to add to the binary number. The next digit value is 2 and the final digit value is 1, adding up to 3, so the last step is setting the two rightmost digits both to 1. Therefore, 39 in binary is 100111.
+                            </p>
+                            <br>
+                            <p class ="text-muted mb-0">
+                                This can be useful when dealing when binary is used to count in computers. After all, computers need to count the length of tasks or the number of times a task has been performed, which will be done in binary, not decimal. Being told that the time that passed since a task was performed as 101110111 does not really have any meaning to us, but being told that 375 seconds have passed does. We can then use this knowledge to adjust parameters in a program, determine when to reset the counter, or whatever else it is the programmer needs to do.
+
+                            </p>
+                    </div>
+            </div>
+        </section>
+        <!-- Practice Problems-->
+           <section id = portfolio class="page-section bg-dark text-white">
+             <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="mt-0">Practice Problems</h2>
+                        <hr class="divider my-4" />
+                        <p class="text-muted mb-5">Here is a converter to help with the problems!</p>
+                        <input type = "text" id = "input">
+                        <input type = "button" id = "b_to_d" value = "Binary to Decimal">
+                        <input type = "button" id = "d_to_b" value = "Decimal to Binary">
+                        <p id = Result></p>
+                        <p class="text-muted mb-5"><br>Here are a few practice problems!</p>
+                        <p id =test> </p>
+                        <input type = "text" id = "answer">
+                        <input type = "button" id = "submit" value = "Submit">
+                        <input type = "button" id = "show" value = "Show Answer">
+                        <input type = "button" id = "right" value = "Next Question">
+                        <input type = "button" id = "left" value = "Previous Question">
+                    </div>
+                </div>
+                <div class="row">
+                     <div class="col-lg-12 mr-auto text-center">
+                         <br>
+                         <br>
+                          <a class="btn btn-primary btn-xl js-scroll-trigger"  href="../lesson1/index.html">Previous Lesson</a>
+                         <br>
+                         <br>
+                          <a class="btn btn-primary btn-xl js-scroll-trigger"  href="../lesson3/index.html">Next Lesson</a>
+                        <br>
+                         <br>
+                        <a class="btn btn-primary btn-xl js-scroll-trigger"  href="../../index.html">Main Page</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="bg-light py-5">
+            <div class="container"><div class="small text-center text-muted">Copyright © 2020 - Binary Arithmeticians</div></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <script src="../converter.js"></script>
+        <script src="questions.js"></script>
+    </body>
+</html>
